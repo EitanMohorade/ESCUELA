@@ -1,0 +1,58 @@
+<html>
+
+	<head>
+
+	</head>
+
+		<body>
+			
+			<script>
+					
+				var alumnos = [];
+				var cantidad = parseInt(prompt("cuantos alumnos queres ingresar?: "));
+				var suma = 0;
+				
+				for (var i = 0; i < cantidad; i++) {
+					
+					var carga = [];
+						carga[0] = prompt("nombre del alumno : ");
+						carga[1] = prompt("apellido del alumno : ");
+						carga[2] = parseInt(prompt("nota del alumno : "));
+					alumnos.push(carga);
+				}
+
+				var min = alumnos[0][2];
+				var max = alumnos[0][2];
+				
+				for (var i = 0; i < alumnos.length; i++) {
+				
+					for (var j = 0; j < alumnos[i].length; j++){
+						document.write(alumnos[i][j]+"<br>");
+					}
+				}
+				
+					
+				for (var i = 0; i < alumnos.length; i++) {
+				
+					if(max<alumnos[i][2]){
+						max=alumnos[i][2];
+					}
+					if(min>alumnos[i][2]){
+						min=alumnos[i][2];
+					}
+						suma = suma+alumnos[i][2];
+				}
+				document.write("promedio de notas: "+suma/alumnos.length+"<br>");
+				document.write("edad min: "+ min +"<br>");
+				document.write("edad max: "+ max);
+				
+				
+				
+				
+				
+			
+			</script>
+
+		</body>
+
+</html>
