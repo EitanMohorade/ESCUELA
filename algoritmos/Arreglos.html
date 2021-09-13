@@ -1,0 +1,60 @@
+<html>
+
+	<head>
+
+	</head>
+
+		<body>
+			
+			<script>
+					
+				var personas = [];
+				var cantidad = parseInt(prompt("cuantos personas queres ingresar?: "));
+				var suma = 0;
+				
+				for (var i = 0; i < cantidad; i++) {
+					
+					var carga = [];
+						carga[0] = prompt("nombre de la persona : ");
+						carga[1] = parseInt(prompt("edad de la persona : "));
+						carga[2] = parseInt(prompt("peso de la persona : "));
+						carga[3] = parseInt(prompt("DNI de la persona : "));
+					personas.push(carga);
+				}
+
+				var minedad = personas[0][1];
+				var maxedad = personas[0][1];
+				
+				for (var i = 0; i < personas.length; i++) {
+				
+					for (var j = 0; j < personas[i].length; j++){
+						document.write(personas[i][j]+"<br>");
+					}
+				}
+				
+					
+				for (var i = 0; i < personas.length; i++) {
+				
+					if(maxedad<personas[i][1]){
+						maxedad=personas[i][1];
+					}
+					if(minedad>personas[i][1]){
+						minedad=personas[i][1];
+					}
+						suma = suma+personas[i][2];
+				}
+				document.write("promedio de pesos: "+suma/personas.length+"<br>");
+				document.write("edad min: "+ minedad +"<br>");
+				document.write("edad max: "+ maxedad+"<br>");
+				document.write("peso total: "+suma);
+				
+				
+				
+				
+				
+			
+			</script>
+
+		</body>
+
+</html>

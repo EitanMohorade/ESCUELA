@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+
+
+<body>
+	
+	
+	<script>
+
+
+
+				var docente  = ["juan ","mansilla ",9];
+				var valorxhs = 345;
+				var SB = 0;
+				
+				var SN= 0;
+				var DJ=12;
+				var DOS=3;
+			
+				
+				
+					if(SB < docente[2]){
+						SB = docente[2]*valorxhs;
+					}
+				
+				document.write(docente+"<br>"+"Valor por hora: "+valorxhs+"<br>"+"sueldo bruto: "+SB+"<br>");
+					
+					if(DJ<SB){
+
+						DJ=DJ*SB/100;
+
+					}
+					document.write("descuento con jubi: "+DJ+"<br>");
+					if(DOS<SB){
+
+						DOS=DOS*SB/100;
+
+					}
+					document.write("descuento de la obra social: "+DOS+"<br>");
+					if (SN<SB){
+					
+						SN=SB-DJ-DOS;
+						
+					}
+					document.write("sueldo nato: "+SN);
+					
+		
+		
+	</script>	
+
+	
+	
+</body>
+</html>
