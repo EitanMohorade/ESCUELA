@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+	
+		<title>ejer009</title>
+		
+	</head>
+	
+	
+		<body>
+			<form action="" method="">
+
+				Nombre de Persona: <input type="text" name="nombre" ></br>
+		
+				DNI de Persona: <input type="text" id="DNI" ></br>
+
+		
+				<input type="button" value="calCUIL" onclick="calCUIL();"></br>
+				
+				CUIL de Persona: <input type="text" id="CUIL" ></br>
+
+				<input type="reset"></br>
+				
+					<h4 >CUIL a calcular</h4>
+					<script>
+						
+						function calCUIL(){
+							var DNI, cuil;
+						 DNI = document.getElementById("DNI").value;
+						 cuil = document.getElementById("CUIL");
+						 cuil.value="20-"+DNI+"-5";
+						
+						
+					
+					
+					
+						}
+				
+					</script>
+
+
+			</form>
+			
+			
+		</body>
+		
+		
+		
+		
+</html>
